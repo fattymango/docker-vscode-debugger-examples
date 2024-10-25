@@ -1,0 +1,10 @@
+root = "."
+tmp_dir = "tmp"
+
+[build]
+  cmd = "go build -o ./bin/app ./..."
+  bin = "bin/app"
+  include_ext = ["go"]
+  exclude_dir = ["assets", "vendor"]
+  full_bin = "dlv exec --continue --accept-multiclient --listen=:2345 --headless=true --api-version=2 ./bin/app"
+

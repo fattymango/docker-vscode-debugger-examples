@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "sourceMap": true,  // Enable source maps for debugging
+    "outDir": "./dist"  // Optional, you can leave out if using ts-node directly
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

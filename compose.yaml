@@ -1,0 +1,22 @@
+services:
+  go:
+    container_name: go_debugger
+    build:
+      context: ./go
+      dockerfile: Dockerfile
+    volumes:
+      - ./go:/app
+    ports:
+      - "8080:8080"
+      - "2345:2345"
+  
+  node:
+    container_name: node_debugger
+    build:
+      context: ./node
+      dockerfile: Dockerfile
+    volumes:
+      - ./node:/app
+    ports:
+      - "3000:3000"
+      - "9229:9229"
