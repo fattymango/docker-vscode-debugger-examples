@@ -20,3 +20,14 @@ services:
     ports:
       - "3000:3000"
       - "9229:9229"
+  
+  python:
+    container_name: python_debugger
+    build:
+      context: ./python
+      dockerfile: Dockerfile
+    volumes:
+      - ./python:/app
+    ports:
+      - "8888:8888"
+      - "5678:5678"
