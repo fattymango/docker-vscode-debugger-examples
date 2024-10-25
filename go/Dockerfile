@@ -13,8 +13,7 @@ RUN go mod download
 # Install git, bash, and Delve for debugging
 RUN apk add --no-cache git bash && \
     go install github.com/go-delve/delve/cmd/dlv@latest
-# Install CA certificates
-RUN apk --no-cache add ca-certificates
+
 
 RUN go install github.com/air-verse/air@latest
 
